@@ -1,4 +1,4 @@
-#TDA_CarloCabrera
+# TDA_CarloCabrera
 Este repositorio contiene el código desarrollado durante la realización del Trabajo de Fin de Grado del Grado en Ingeniería Informática de la Universidad Politécnica de Madrid, centrado en el análisis de trayectorias GPS mediante técnicas de Análisis Topológico de Datos (TDA).
 
 📁 Estructura del repositorio
