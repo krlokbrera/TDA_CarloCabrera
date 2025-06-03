@@ -11,6 +11,7 @@ Plantilla_TDA_Trayectorias.ipynb	Notebook organizado como plantilla reproducible
 Se utiliza el conjunto de datos Geolife GPS Trajectories, que contiene miles de trayectorias recogidas por usuarios en dispositivos GPS. Cada archivo .plt incluye coordenadas geográficas (latitud, longitud) con marcas temporales y altitud.
 
 🧠 Tecnologías y bibliotecas
+
 Python 3.11
 
 Giotto-TDA 🌀
@@ -24,16 +25,8 @@ Matplotlib / Seaborn / Plotly
 ⚙️ Requisitos
 Instala los paquetes necesarios ejecutando:
 
-bash
-Copiar
-Editar
-pip install -r requirements.txt
-Si no tienes un requirements.txt, puedes instalar manualmente:
-
-bash
-Copiar
-Editar
 pip install gtda numpy pandas matplotlib scikit-learn seaborn plotly shapely
+
 🚀 ¿Qué puedes hacer con este código?
 Visualizar trayectorias en 2D y 3D.
 
