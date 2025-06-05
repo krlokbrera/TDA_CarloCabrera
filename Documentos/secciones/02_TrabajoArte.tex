@@ -1,0 +1,138 @@
+\chapter{Trabajo relacionado y Estado del Arte} \label{chp:state-of-the-art}
+
+El presente capítulo tiene como objetivo contextualizar el trabajo realizado dentro del marco teórico y tecnológico actual. Para ello, se analiza en primer lugar el concepto de trayectoria, su relevancia en diferentes ámbitos de aplicación y los principales retos asociados a su estudio. A continuación, se presentan los fundamentos del Análisis Topológico de Datos (TDA), una técnica emergente para el estudio estructural de datos complejos como las trayectorias. Finalmente, se recogen las principales metodologías y herramientas utilizadas en el estado del arte, así como los trabajos previos que han explorado enfoques similares en distintos dominios.
+
+\section{Introducción al Análisis de Trayectorias}
+
+El análisis de trayectorias es una disciplina interdisciplinar que estudia la evolución espacial y temporal de objetos móviles. Estos datos, representados generalmente como secuencias de coordenadas en el espacio-tiempo, permiten modelar y comprender comportamientos dinámicos en una amplia variedad de contextos: desde la movilidad urbana y el tráfico aéreo, hasta aplicaciones biomédicas o industriales. Dada su naturaleza compleja, el análisis de trayectorias requiere herramientas matemáticas y computacionales que permitan extraer información relevante, detectar patrones y representar de manera eficiente la geometría del movimiento.
+
+\subsection{Definición y relevancia del estudio de trayectorias}
+
+El análisis de trayectorias se refiere al estudio de las rutas o caminos que siguen objetos o agentes a lo largo del tiempo en un espacio determinado. Una trayectoria puede definirse como la secuencia de posiciones (o puntos) en un espacio métrico, lo cual permite modelar dinámicas y comportamientos en una amplia variedad de contextos. La relevancia del estudio radica en que estas secuencias no solo capturan información sobre la posición, sino que también nos permiten observar patrones temporales y espaciales críticos para entender fenómenos complejos.
+
+\vspace{0.1cm}
+
+\subsection{Aplicaciones y Principales Retos}
+
+La versatilidad del análisis de trayectoria permite que estas técnicas pueden ser usadas para una gran variedad de campos sin relación aparente, con una alta eficacia, entre ellos destacan:
+
+\begin{itemize}
+    \item \textbf{Movilidad urbana:} Optimización de rutas y gestión del tráfico de vehículos y dispositivos móviles. \cite{lamosa2021topological}
+    \item \textbf{Transporte aéreo:} Clasificación y detección de patrones en datos de vuelo, identificación de retrasos y desviaciones.\cite{airtraffic2025} \cite{espinoza2022tda_air}
+    \item \textbf{Medicina personalizada:} Análisis de trayectorias clínicas para predecir progresión de enfermedades. \cite{bosoni2024predicting} \cite{shaikhina2020tda}
+    \item \textbf{Sistemas físicos y dinámicos:} Modelado de trayectorias en espacios de fase o espacios de búsqueda en problemas complejos. \cite{garland2021tda_dynamics}
+\end{itemize}
+
+No obstante, el análisis de trayectorias también presenta retos importantes:
+
+\begin{itemize}
+    \item \textbf{Alta dimensionalidad:} Las trayectorias suelen estar definidas por múltiples variables (coordenadas espaciales, velocidad, tiempo, etc.), lo que dificulta su visualización y análisis sin aplicar técnicas de reducción de la dimensionalidad.
+    \item \textbf{Ruido e incertidumbre:} Los datos reales pueden estar contaminados por ruido o inconsistencias, lo que exige métodos robustos para extraer patrones significativos.
+    \item \textbf{Complejidad en la modelización:} La representación adecuada de trayectorias requiere elegir modelos matemáticos que capturen tanto la parte local (geometría) como la global (topología) de los datos.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Fundamentos Matemáticos y Teóricos}
+
+El análisis riguroso de trayectorias y su estructura subyacente requiere una base matemática sólida. En esta sección se presentan los conceptos fundamentales que sustentan el tratamiento teórico de las trayectorias desde una perspectiva geométrica y topológica. Por un lado, se describen las distintas formas de representar trayectorias como objetos matemáticos, ya sea como series temporales, curvas en espacios métricos o conjuntos de puntos en espacios de dimensión arbitraria. Por otro, se introduce el Análisis Topológico de Datos (TDA), un marco emergente basado en la topología algebraica, que permite capturar propiedades globales de los datos como la conectividad, la presencia de ciclos y la persistencia de estructuras en distintas escalas.
+
+Estos fundamentos proporcionan las herramientas necesarias para abordar el análisis de trayectorias de forma robusta y explicativa, especialmente en contextos con ruido, alta dimensionalidad o complejidad estructural.
+
+\vspace{2cm}
+\subsection{Representación de Trayectorias}
+
+La representación de trayectorias se fundamenta en distintos enfoques matemáticos. Tradicionalmente, las trayectorias se modelan como series temporales o datos funcionales, es decir, como funciones que asignan una posición en el espacio a cada instante de tiempo. Esta representación permite aplicar técnicas de análisis estadístico y geométrico para extraer características relevantes (por ejemplo, tendencias, periodicidad y anomalías).
+
+\vspace{0.1cm}
+
+Además, la representación geométrica de trayectorias como conjuntos de puntos en un espacio de dimensión \({\cal D}\) posibilita el uso de distancias y métricas (como la distancia Euclidiana, la Distancia de Dynamic Time Warping o la Frechét) para evaluar similitudes entre trayectorias. Estos métodos tradicionales se han complementado, en los últimos años, con enfoques que integran herramientas de análisis topológico, ofreciendo una visión más global e intrínseca de la forma subyacente de los datos \cite{leykam2023topological}.
+
+\subsection{Introducción al TDA}
+
+El Análisis Topológico de Datos (TDA) es un marco matemático que utiliza herramientas de la topología algebraica para extraer características robustas e invariantes de conjuntos de datos complejos. Su principal ventaja reside en la capacidad de capturar la “forma” o estructura global de los datos, incluso en presencia de ruido y en contextos de alta dimensionalidad.
+
+\vspace{0.1cm}
+
+Una de las técnicas fundamentales de TDA es la homología persistente, que consiste en analizar cómo cambian las estructuras topológicas (como componentes conexas, ciclos y vacíos) a medida que se varía un parámetro de escala en la construcción de complejos simpliciales. Esta metodología permite generar diagramas de persistencia y barcodes, que sintetizan la vida de las características topológicas a lo largo de diferentes escalas \cite{chazal2021introduction}.
+
+\vspace{0.1cm}
+
+El uso de TDA se ha extendido en el campo de la ciencia de datos y el aprendizaje automático, ya que ofrece una representación compacta y estable de las características estructurales de los datos, complementando modelos basados en geometría o estadísticas convencionales \cite{hensel2021survey}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Estado del Arte}
+
+El análisis de trayectorias ha experimentado un notable desarrollo en los últimos años, impulsado por la disponibilidad creciente de datos espaciales y temporales procedentes de sensores, sistemas de navegación y registros clínicos, entre otros. Esta sección presenta una revisión de los enfoques más relevantes en la literatura, agrupándolos en metodologías tradicionales y técnicas basadas en el Análisis Topológico de Datos (TDA).
+
+Los métodos tradicionales, como los basados en geometría, estadística o clustering, han sido ampliamente utilizados para modelar, comparar y clasificar trayectorias. Sin embargo, estos métodos a menudo presentan limitaciones frente a datos ruidosos o de alta complejidad. En respuesta a ello, el TDA ha emergido como una alternativa robusta, capaz de extraer información sobre la estructura global de los datos mediante herramientas como la homología persistente y el algoritmo Mapper.
+
+En esta sección se describen los métodos actuales más representativos, las bibliotecas y frameworks más utilizados, así como trabajos previos destacados en distintos dominios de aplicación, con especial énfasis en movilidad, transporte y sistemas dinámicos.
+
+\subsection{Métodos de Análisis de Trayectorias}
+
+En los últimos años se han desarrollado diferentes métodos para el análisis de trayectorias, que pueden agruparse en dos grandes categorías:
+
+\begin{itemize}
+    \item \textbf{Métodos tradicionales:} Incluyen técnicas estadísticas y geométricas como el clustering con k-means, DBSCAN, o técnicas de reducción de dimensionalidad como PCA y t-SNE. Estos métodos se centran en capturar información local o global a partir de distancias y similitudes entre trayectorias.
+    
+    \item \textbf{Métodos topológicos:} Basados en TDA, permiten extraer características invariantes ante transformaciones suaves. Entre ellos:
+    \begin{itemize}
+        \item \textbf{Homología Persistente:} Detecta y cuantifica la aparición y desaparición de ciclos, componentes conexas y cavidades a múltiples escalas \cite{chazal2021introduction}.
+        \item \textbf{Algoritmo Mapper:} Construye una representación en forma de grafo de la topología de los datos, útil para exploración visual y descubrimiento de clases latentes \cite{hensel2021survey}.
+    \end{itemize}
+\end{itemize}
+
+Técnicas recientes combinan estos métodos con aprendizaje automático, dando lugar al campo emergente del \textit{topological machine learning}, que aprovecha estructuras topológicas para mejorar la generalización y robustez de los modelos. \cite{leykam2023topological}
+
+\subsection{Herramientas y Frameworks} \label{Herramientas}
+
+El avance del TDA ha sido posible gracias al desarrollo de bibliotecas especializadas, entre las que destacan en el entorno de Python:
+
+\begin{itemize}
+    \item \textbf{GUDHI:} Biblioteca en C++/Python para la construcción de complejos simpliciales y cálculo de diagramas de persistencia. \cite{gudhi}
+    \item \textbf{Dionysus y DIPHA:} Herramientas eficientes para la computación de homología persistente. \cite{DIPHA}
+    \item \textbf{Giotto-TDA:} Librería en Python que integra TDA con pipelines de machine learning, permitiendo la vectorización de diagramas y su uso directo en clasificadores o modelos de clustering. \cite{chazal2021introduction} \cite{Giotto-tda}
+\end{itemize}
+
+En el entorno R, destacan paquetes como \textbf{tdaverse} \cite{tdaverse}, un conjunto de herramientas diseñadas para análisis topológico en R, incluyendo el paquete \textbf{ripserr} \cite{ripserr} que proporciona acceso rápido a cálculo de homología persistente mediante envoltorios a bibliotecas C++; \textbf{phutil} \cite{phutil} para manipulación avanzada de datos topológicos; y \textbf{tdarec} \cite{tdarec}, orientado al estudio de curvas de entropía y complejidad topológica.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{2cm}
+\section{Trabajos Previos}
+
+Diversos estudios han abordado el análisis de trayectorias en distintos dominios, combinando herramientas estadísticas, geométricas y topológicas.
+
+\vspace{0.2cm}
+
+En el ámbito de la aviación, se ha utilizado clustering sobre trayectorias de vuelo para gestionar el tráfico aéreo y anticipar desviaciones significativas \cite{airtraffic2025}. En medicina, el análisis de trayectorias temporales de exposición de pacientes ha permitido predecir recaídas en enfermedades crónicas como la esclerosis múltiple, mediante modelos que integran secuencias temporales en pipelines de aprendizaje automático \cite{bosoni2024predicting}.
+
+Por ejemplo, en contextos de movilidad urbana, el análisis de trayectorias posibilita el seguimiento y optimización del tráfico de vehículos. En la gestión del tráfico aéreo, este ha sido utilizado para detectar y predecir desviaciones o anomalías en trayectorias de vuelo, mediante el uso de técnicas de clustering y predicción, véase: \cite{airtraffic2025}. Asimismo, en el ámbito biomédico, se ha aplicado para la predicción de recaídas en esclerosis múltiple, modelando trayectorias de exposición del paciente, lo cual resalta la flexibilidad del enfoque para representar dinámicas longitudinales en medicina personalizada \cite{bosoni2024predicting}. Adicionalmente, se han desarrollado estudios que aplican herramientas topológicas al diagnóstico temprano de enfermedades como el cáncer \cite{jiang2022tdaOnco} \cite{balasubramanian2015cancerTDA}, la diabetes \cite{saleh2023tdaDiabetes} \cite{chi2021diabetes} o trastornos neurodegenerativos como el Alzheimer y el Parkinson \cite{liu2023tdaDementia} \cite{hofer2020tdaParkinson} \cite{jeong2016tdaParkinson} \cite{cheng2024neurodegenerative}.
+
+\vspace{0.1cm}
+
+En un contexto más puramente matemático, el análisis de trayectorias permite modelar la evolución de sistemas dinámicos, como ocurre con los atractores caóticos, los cuales representan patrones emergentes en el espacio de fases. Estos patrones pueden capturarse de forma más robusta mediante herramientas topológicas, como el Análisis Topológico de Datos (TDA), que ha mostrado su eficacia en múltiples dominios científicos y de ingeniería.
+\vspace{0.2cm}
+
+Desde un punto de vista metodológico, los trabajos de revisión como \cite{leykam2023topological} \cite{hensel2021survey} presentan un panorama exhaustivo del uso del TDA en machine learning, destacando su papel para la robustez en entornos de datos ruidosos o no estructurados. Estas contribuciones consolidan al TDA como una herramienta clave para la representación y el aprendizaje a partir de trayectorias en contextos diversos.
+
+\subsection{Avances recientes en representación topológica de trayectorias}
+La representación topológica de trayectorias ha incorporado innovaciones centradas en resumir las propiedades globales de las curvas de movimiento. Herramientas como los \textit{diagramas de persistencia} se traducen ahora en características vectoriales mediante paisajes de persistencia, imágenes de persistencia u otras superficies topológicas, preservando la información global del conjunto de datos a múltiples escalas. Por ejemplo, Cuerno et al. construyen «huellas» topológicas de aeropuertos a partir de los retrasos y desviaciones de vuelo usando paisajes de persistencia, capturando así patrones globales de comportamiento en el tráfico aéreo \cite{Cuerno2025}. De forma similar, la biblioteca \textit{tramoTDA} representa trayectorias a través de diagramas e imágenes de persistencia para su clasificación en contextos de planificación urbana y navegación marítima, identificando patrones sutiles que escapan a los métodos clásicos \cite{EsteveFalco2024}. Estas herramientas integran rigor científico con diseños accesibles, ampliando el análisis visual de datos de movilidad en sistemas complejos \cite{EsteveFalco2024}. 
+
+Además, la importancia de estas representaciones se refleja en trabajos recientes de clasificación de trayectorias: por ejemplo, Esteve y Falcó ofrecen una perspectiva completa de métodos topológicos para clasificar trayectorias, destacando cómo los invariantes de persistencia enriquecen los enfoques tradicionales \cite{EsteveFalco2025}. 
+
+\subsection{Integración de TDA con modelos de aprendizaje profundo}
+La convergencia de TDA y aprendizaje profundo ha dado lugar al emergente campo del «aprendizaje profundo topológico». En este paradigma, las redes neuronales incorporan componentes topológicos (por ejemplo, diagramas de persistencia o capas basadas en homología persistente) para capturar propiedades globales de los datos \cite{Zia2024}. Zia et al. revisan este área emergente, describiendo cómo las técnicas topológicas se han integrado progresivamente en distintas etapas de los modelos de aprendizaje profundo \cite{Zia2024}. 
+
+De manera complementaria, TDA también se emplea para analizar modelos existentes: por ejemplo, Liu et al. aplicaron homología persistente a las salidas de una red profunda compleja, transformando las predicciones en un «paisaje topológico» que facilita la interpretación del modelo. Este análisis topológico de las salidas revela detalles sutiles de la estructura de predicción que pasan desapercibidos con métodos de reducción de dimensión convencionales (como t-SNE o UMAP) \cite{Liu2023}. 
+
+\subsection{Aplicaciones emergentes del TDA en trayectorias biológicas y medioambientales}
+Más allá de la movilidad urbana o aérea, el TDA se ha explorado en datos de trayectorias biológicas. Por ejemplo, Bhaskar et al. mostraron que configuraciones espaciales de poblaciones celulares de dos tipos pueden representarse eficazmente mediante imágenes de persistencia, logrando clasificar con alta precisión distintas arquitecturas celulares asociadas a variaciones en adhesión \cite{Bhaskar2023}. Este trabajo ilustra cómo los invariantes persistentes pueden capturar dinámicas de organización en tejidos multicelulares, con potenciales aplicaciones en el estudio de procesos de desarrollo y enfermedad.
+
+En el ámbito medioambiental, Evans-Lee y Lamb proponen un método novedoso para detectar anomalías en trayectorias geoespaciales marinas. Al incrustar las coordenadas espaciales y temporales de los datos de posicionamiento de embarcaciones (AIS) en $\mathbb{R}^3$
+, calculan la homología persistente para identificar bucles topológicos en las rutas de navegación. La presencia de dichos bucles, que no debería ocurrir en condiciones normales, señala trayectorias atípicas de tipo «crop circle» (movimientos circulares repetidos). Este enfoque robusto frente a perturbaciones locales ofrece nuevas herramientas para la navegación marítima y el monitoreo ambiental, permitiendo detectar patrones inusuales en la movilidad de buques con alta sensibilidad \cite{EvansLee2024}.

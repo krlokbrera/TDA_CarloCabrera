@@ -1,0 +1,41 @@
+% \ganttbar[name=NAME]{NAME}{SEMANA_INICIO}{SEMANA_FIN} \\
+% \ganttlink[link type={s-s || s-f || f-s || f-f}]{elem0}{elem1}
+%   s-s (start-to-start) 
+%   s-f (start-to-finish)
+%   f-s (finish-to-start)
+%   f-f (finish-to-finish)
+
+% El TFG se desarrolla en, aproximadamente, 17-18 semanas
+    \begin{ganttchart}[
+            hgrid,
+            vgrid,
+            x unit=1cm,
+            y unit chart=0.9cm
+        ]{1}{17}
+
+        % Definicion de cada tarea y las semanas de inicio y fin
+        \gantttitle{Semana}{17} \\
+        \gantttitlelist{1,...,17}{1} \\
+         % Tareas del plan de trabajo:
+        \ganttbar[name=T1]{Investigación Preliminar}{1}{1} \\
+        \ganttbar[name=T2]{Elaboración del Plan de Trabajo}{2}{2} \\
+        \ganttbar[name=T3]{Fundamentos y Estado del Arte}{3}{6} \\
+        \ganttbar[name=T4]{Estudio del Problema (Modelo de Datos)}{3}{4} \\
+        \ganttbar[name=T5]{Estudio de Soluciones (MTS, FDA)}{5}{7} \\
+        \ganttbar[name=T6]{Extracción, Preparación, Codificación y Pruebas}{8}{14} \\
+        \ganttbar[name=T7]{Memoria de Seguimiento}{8}{8} \\   
+        \ganttbar[name=T8]{Documentación de Resultados}{15}{15} \\       
+        \ganttbar[name=T9]{Memoria TFG}{3}{15} \\
+        \ganttbar[name=T10]{Ficha Resumen del TFG}{16}{16} \\
+        \ganttbar[name=T11]{Pres. Defensa}{16}{17}
+        
+        % Dependencias entre tareas:
+        \ganttlink[link type=f-s]{T1}{T2}
+        \ganttlink[link type=s-s]{T3}{T4}
+        \ganttlink[link type=s-s]{T3}{T9}
+        \ganttlink[link type=f-s]{T5}{T6}
+        \ganttlink[link type=s-s]{T6}{T7}
+        \ganttlink[link type=f-s]{T6}{T8}
+        \ganttlink[link type= f-s]{T9}{T10}
+        \ganttlink[link type= f-s]{T9}{T11}
+    \end{ganttchart}

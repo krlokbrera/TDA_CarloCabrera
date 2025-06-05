@@ -1,0 +1,176 @@
+%%-----------------------------------------------
+%% Cargar datos relativos al TFG:
+%% (actualizar estos datos en secciones/_DatosTFG.tex)
+\input{secciones/_DatosTFG}
+
+%%-----------------------------------------------
+%% Importar Preámbulo:
+\input{include/Preambulo}
+
+% Aquí puedes cambiar el titulo del Plan de Trabajo
+% y añadir el titulo de tu TFG, o dejar solo "Plan de Trabajo"
+\renewcommand{\TituloTFG}{ Plan de Trabajo}
+
+%%-----------------------------------------------
+%% Documento
+\begin{document}
+\input{include/Portada}
+
+%%-----------------------------------------------
+\chapter*{Descripción y Objetivos}
+
+Este Trabajo Fin de Grado se centra en el análisis topológico y estadístico de trayectorias en espacios de baja y alta dimensión. Se aborda el estudio de datos que representan trayectorias, ya sean de sentido físico (movimiento de vehículos en zonas urbanas) o trazas derivadas de procesos de optimización y procesos aleatorios en espacios discretos o continuos, en este caso datos generados a partir del atractor de Lorenz. La propuesta tiene como fin identificar características topológicas relevantes en la nube de datos, lo que permitirá la aplicación de técnicas de clustering y clasificación para extraer conocimiento y comprender mejor el comportamiento de las trayectorias.
+
+Los principales objetivos de este Trabajo de Fin de Grado son: 
+\begin{itemize} 
+\item[•] Desarrollar una metodología para extraer conocimiento de datos representados como trayectorias, aplicable tanto a escenarios físicos como a contextos abstractos. \item[•] Diseñar y validar una propuesta de análisis que abarque la adquisición de datos, su modelización, exploración, inferencia y síntesis de conclusiones. 
+\item[•] Definir y documentar las variables y estructuras de datos de interés, estableciendo criterios claros para la interpretación y agrupación de trayectorias mediante técnicas de clustering. 
+\item[•] Evaluar el rendimiento, la robustez (sensibilidad) y la complejidad computacional de las soluciones propuestas. 
+\end{itemize}
+
+\chapter*{Tareas}
+
+El desarrollo de este Trabajo Fin de Grado se ha planificado mediante una serie de tareas estructuradas, cuyo seguimiento se facilita mediante un diagrama de Gantt que distribuye las actividades a lo largo de las 17 semanas de duración estimada del proyecto. Esta planificación garantiza una gestión eficiente del tiempo, abarcando desde la fase de investigación hasta la defensa del proyecto frente a un tribunal de evaluación. A continuación, se adjunta una lista de las tareas a realizar durante el desarrollo, así como un diagrama de Gantt para ayudar a la visualización de la distribución de las mismas.
+
+\begin{enumerate}
+    \item[T1 -] Investigacion Preliminar
+    \item[T2 -] Elaboracion Plan de Trabajo
+    \item[T3 -] Fundamentos y Estado del Arte
+    \item[T4 -] Estudio del Problema (Modelo de Datos y Datos a analizar)
+    \item[T5 -] Estudio de Soluciones
+    \item[T6 -] Extraccion, Preparacion, Codificacion y Analisis
+    \item[T7 -] Memoria de Seguimiento
+    \item[T8 -] Documentacion de Resultados
+    \item[T9 -] Ficha Resumen del TFG
+    \item[T10 -] Memoria TFG
+    \item[T11 -] Pres. Defensa
+\end{enumerate}
+
+
+\begin{landscape}
+\input{GanttDiagram}
+\end{landscape}
+
+
+\chapter*{Propuesta de Trabajo Oficial}
+
+
+\title{Trabajo Fin de Grado\\ Análisis topológico de trayectorias en baja y alta dimensión}
+
+\author{\large Juan A. Fdez del Pozo\\
+  \normalsize Computational Intelligence Group, Universidad Polit\'ecnica de Madrid\\
+  \normalsize Campus de Montegancedo, Boadilla del Monte, 28660 Madrid, Spain
+email{\{jafernandez\}@fi.upm.es}\\
+\date{}}
+
+\textheight        25cm
+\textwidth         17.5cm
+\evensidemargin    -0.25cm
+\oddsidemargin =   -0.25cm
+\topmargin         -3.0cm
+
+%%dimensiones hxv de figuras
+%\newcommand{\hsz}{7.0cm}
+%\newcommand{\hsz}{15.0cm}
+%\newcommand{\vsz}{0.75cm}
+
+\section{Resumen general del trabajo}
+
+El TFG propone hacer un análsis topológico y estadístico de trayectorias ($X(t) \sim F(R^n)$, $t \in R$), que pueden tener sentido fisico (vehículos, m\'oviles,\ldots) o ser trazas en espacios de soluciones de problemas de optimización o procesos aleatorios sobre un espacio de estados discreto o continuo.
+La exploración de los datos considera la identificación de características topológicas, clustering o clasificación en la nube de datos (conjunto de trayectorias).
+
+%Trabajo exclusivo del alumno: \ldots, \\
+%del Grado de: \ldots \\
+%N\'umero de Matr\'{\i}cula: \ldots
+
+%% Section 2
+\section{Lista de objetivos concretos}
+
+\paragraph{Definición del problema:}
+
+Se trata de desarrollar una metodología para extraer conocimiento de los datos, reales o sintéticos,
+en términos de series temporales y/o de datos funcionales y
+diseñar una propuesta de análisis de los datos:
+adquisición de datos, modelización, exploración, inferencia y sintesis de conclusiones.\\
+
+Documentar las variables y
+establecer los objetivos para la propuesta de análisis.
+Planificar el proceso de preparación de los datos, análisis y evaluación del resultado.
+
+\paragraph{Análisis de requisitos:}
+
+Definir las estructruras de datos para representar la información de interés.
+Mostrar un descriptiva de los datos, generar una estructura de grupos de trayectorias interpretable.
+Estudiar el rendimiento, robusted (sensibilidad) del análisis y la complejidad computacional.
+
+
+%% Section 3
+\section{Desglose de la dedicación total del trabajo en horas}
+%% 11 ECTS, 297 horas, 10+20+30+40+20+90+40+47
+
+\begin{enumerate}
+
+\item  Redacción del plan de trabajo (10)
+
+\item  Fundamentos, estado del arte, alineamiento con los ODS  (20)
+
+\item  Estudio del problema: modelo de datos (trayectoria) y de datos funcionales (30)
+
+\item  Estudio de algunas soluciones seg\'un el tipo de dato (MTS, FDA) que soporta las hipótesis (40)
+
+\item  Redacci\'on de la memoria de seguimiento (20)
+
+\item  Extracción de la muestra (adquisición de datos), Preparación,
+Descriptiva y Exploración, Codificaci\'on de algoritmos y Pruebas (90)
+
+\item  Documentaci\'on de los resultados del an\'alisis (40)
+
+\item  Redacci\'on de la memoria final y preparaci\'on de la presentación del trabajo (47)
+
+\end{enumerate}
+
+%% Section 4
+\section{Conocimientos previos recomendados para hacer el trabajo}
+
+La teor\'{\i}a subyacente a los problemas que se quieren desarrollar es conocida por
+los alumnos que han cursado las asignaturas del Grado.
+El alumno podrá documentarse en análisis topológico de datos y herramientas software disponibles.
+
+La programaci\'on y documentaci\'on debe realizarse en espa\~nol/ingl\'es,
+el plan de trabajo y las memorias en espa\~nol/ingl\'es.
+
+Es recomendable conocer a nivel b\'asico \LaTeX para preparar documentos: memoria y presentación.
+
+El trabajo se puede realizar bajo Windows o Linux, en el entorno R, Python,\ldots.
+
+%% Section 5
+%\section{Fichero con los detalles del trabajo}
+
+\begin{thebibliography}{90}
+
+\bibitem{R3}
+  RStudio \\
+   {\tt https://rstudio.com/}
+
+\bibitem{R5}
+  LaTex \\
+{\tt https://es.overleaf.com/}
+
+\bibitem{R7}
+  El arte de la estadística: cómo aprender de los datos \\
+  Spiegelhalter, David J., Ed. Capitan Swing, 2023.\\
+{\tt https://capitanswing.com/\-libros/el-arte-de-la-estadistica/}
+
+\bibitem{R8}
+Topological data analysis and machine learning, \\
+Daniel Leykam \& Dimitris G. Angelakis,  \\
+Advances in Physics: X, 8:1, 2202331, (2023)\\
+DOI: 10.1080/23746149.2023.2202331
+
+\bibitem{R9}
+  Gemini for Google Workspace \\
+{\tt https://services.google.com/\-fh/files/misc/gemini-for-google-workspace-prompting-guide-101.pdf}
+
+\end{thebibliography}
+%%-----------------------------------------------
+\end{document}

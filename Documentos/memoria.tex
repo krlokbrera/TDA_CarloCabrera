@@ -1,0 +1,44 @@
+%%-----------------------------------------------
+%% Cargar datos relativos al TFG:
+\input{secciones/_DatosTFG}
+
+%%-----------------------------------------------
+%% Importar Preámbulo:
+\input{include/Preambulo}
+%%-----------------------------------------------
+%% Documento:
+\begin{document}
+
+\input{include/Portada}
+
+%%-----------------------------------------------
+%% Numeración romana:
+\frontmatter
+
+%%-----------------------------------------------
+% \input{secciones/00_Resumen}
+
+
+%%-----------------------------------------------
+%% Numeración arábiga:
+\mainmatter
+
+%%-----------------------------------------------
+\input{secciones/00_Resumen}
+
+\input{secciones/01_Introduccion}
+
+
+\chapter{Borrador Memoria}
+Finalmente, a continuación se encuentra un borrador del índice, así como de los capítulos de introducción y estado del arte correspondientes a la memoria final del proyecto.
+
+\includepdf[pages=-]{borrador.pdf}
+
+
+%%-----------------------------------------------
+%% Anexos
+\clearpage
+%\addcontentsline{toc}{chapter}{\annexname}
+%%-----------------------------------------------
+\end{document}
+
